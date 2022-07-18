@@ -1,0 +1,22 @@
+   {% extends 'base.html.twig' %}
+
+   {% block body %}
+
+   {% include '/partials/_hero.twig' %}
+   
+   {% include '/partials/_search.twig' %}
+
+    <div class="lg:grid lg:grid-cols-2 gap-4 space-y-4 md:space-y-0 mx-4">
+
+       {%for listing in listings %}
+
+   
+          {% include '/components/listing-card.html.twig'  with{'listing':listing} %}
+
+
+      {%endfor%}
+
+     </div>
+    {% endblock %}
+
+    
